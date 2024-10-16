@@ -36,30 +36,41 @@ Welcome to my **Linux Administration Labs** repository! This space documents my 
    vagrant init ubuntu/bionic64
    vagrant up
    vagrant ssh
+   ```
 3. **Test VM Management Commands**
 ```bash
-vagrant halt
-vagrant up
-vagrant destroy
-
+   vagrant halt
+   vagrant up
+   vagrant destroy
+```
 4. **Configure a Private Network Between VMs**
-
-- **Assign static IPs and SSH between them.**
+   - **Assign static IPs and SSH between them.**
 
 ---
 
- **LAMP Stack Deployment**
+ ## **LAMP Stack Deployment**
 
 ### **Overview**  
-Install and configure the **LAMP stack** to host web applications.
+   - Install and configure the **LAMP stack** to host web applications.
 
----
+### **Steps:**
 
-### **Steps**
-
-#### **1. Install Apache:**
+**1. Install Apache:**
 ```bash
 sudo apt update
 sudo apt install apache2 -y
 sudo systemctl start apache2
 sudo systemctl enable apache2
+```
+**2. Install PHP and MariaDB:**
+```bash
+sudo apt install php mariadb-server php-mysql -y
+sudo mysql_secure_installation
+```
+**3. Deploy a sample application (Kanboard or WordPress) and connect it to MariaDB.**
+
+
+
+
+
+
